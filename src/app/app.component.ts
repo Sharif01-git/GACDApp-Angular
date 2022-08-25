@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GACDApp';
+  title = 'Gestion Avancée d\'un Cabinet Dentaire';
 }
