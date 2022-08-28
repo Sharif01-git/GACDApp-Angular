@@ -298,30 +298,20 @@
 
 
 <h2>Liste des patients</h2>
-<table class="table table-striped " style="position: center">
-    <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Email</th>
-            <th>Profil</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let utilisateur of utilisateurs">
-            <td>{{utilisateur.nom}}</td>
-            <td>{{utilisateur.prenom}}</td>
-            <td>{{utilisateur.email}}</td>
-            <td>{{utilisateur.profil}}</td>
-            <td>
-                <a (click) = "updateUtilisateur(utilisateur.id)" class="fa fa-edit" style="color:green"></a>
-                <a (click) = "deleteUtilisateur(utilisateur.id)" class="fa fa-trash" style="margin-left: 10px;color:red"></a>
-                <a (click) = "utilisateurDetails(utilisateur.id)" class="fa fa-list-alt" style="margin-left: 10px;color:blue"></a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+     <div class="col" *ngFor = "let utilisateur of utilisateurs">
+         <div class="card">
+             <img  src="assets/img/profil.jpg"  class="card-img-top" alt="...">
+             <div class="card-body">
+                 <h5 class="card-title" style="color: black">Nom: {{utilisateur.nom}}</h5>
+                 <h6 class="card-title" style="color: black">Prénom:  {{utilisateur.prenom}}</h6>
+                 <h6 class="card-title" style="color: black">Email: {{utilisateur.email}}</h6>
+                 <h6 class="card-title" style="color: black">Profil: {{utilisateur.profil}}</h6>
+                 <a (click) = "updateUtilisateur(utilisateur.id)" class="btn btn-primary">Modifier</a>
+             </div>
+         </div>
+     </div>
+  </div>
 
 </div>
 <!-- /.container-fluid -->
