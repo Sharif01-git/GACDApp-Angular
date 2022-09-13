@@ -45,14 +45,14 @@
         </a>
         <div id="collapsePages" class="collapse " aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="login.html">Dents</a>
+            <a class="collapse-item" (click)="goToDent()">Dents</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Gérer les patients:</h6>
             <a class="collapse-item" (click)="goToPatientList()">Liste des patients</a>
             <a class="collapse-item " (click)="goToPatientCreate()">Ajouter un patient</a>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="login.html">Consultations</a>
-            <a class="collapse-item" href="login.html">Rendez-vous</a>
+            <a class="collapse-item"  (click)="goToRendezvous()">Rendez-vous</a>
           </div>
         </div>
       </li>

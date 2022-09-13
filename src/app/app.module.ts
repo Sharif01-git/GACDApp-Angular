@@ -15,6 +15,12 @@ import { UpdatePatientComponent } from './update-patient/update-patient.componen
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { RendezVousComponent } from './rendez-vous/rendez-vous.component';
+
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,13 +35,21 @@ import { AccueilComponent } from './accueil/accueil.component';
     UpdatePatientComponent,
     LoginComponent,
     RegistrationComponent,
-    AccueilComponent
+    AccueilComponent,
+    RendezVousComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

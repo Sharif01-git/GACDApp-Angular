@@ -38,4 +38,11 @@ export class AccueilComponent implements OnInit {
     this.router.navigate(['/accueil']);
   }
 
+  goToDent(){
+    this.router.navigate(['/dent']);
+  }
+
+  goToRendezvous(){
+    this.router.navigate(['/rendez-vous']);
+  }
 }

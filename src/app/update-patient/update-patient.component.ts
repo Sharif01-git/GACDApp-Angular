@@ -46,4 +46,12 @@ export class UpdatePatientComponent implements OnInit {
   goToAccuiel(){
     this.router.navigate(['/accueil']);
   }
+
+  goToDent(){
+    this.router.navigate(['/dent']);
+  }
+
+  goToRendezvous(){
+    this.router.navigate(['/rendez-vous']);
+  }
 }
