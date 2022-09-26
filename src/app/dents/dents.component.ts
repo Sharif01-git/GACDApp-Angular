@@ -19,8 +19,8 @@ export class DentsComponent implements OnInit {
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2()
     
-    const MODEL_PATH = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb";
-   // const MODEL_PATH = "teeth/mach.glb";
+    //const MODEL_PATH = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb";
+     const MODEL_PATH = "teeth/mach.glb";
     
     //canvas
     const canvas = document.querySelector('.bg');
